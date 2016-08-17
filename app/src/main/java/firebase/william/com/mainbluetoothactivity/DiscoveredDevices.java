@@ -53,6 +53,8 @@ public class DiscoveredDevices extends ListActivity implements ActivityCompat.On
         ((TextView) header.findViewById(R.id.textView)).setText("\nDispositivos próximos\n");
         lv.addHeaderView(header, null, false);
 
+        /*alimentarCabecalho("\nDispositivos próximos\n");*/
+
         /*  Usa o adaptador Bluetooth padrão para iniciar o processo de descoberta. */
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -75,6 +77,16 @@ public class DiscoveredDevices extends ListActivity implements ActivityCompat.On
         btAdapter.startDiscovery();
 
     }
+
+    /*
+    public void alimentarCabecalho(String mensagem){
+        ListView lv = getListView();
+        LayoutInflater inflater = getLayoutInflater();
+        View header = inflater.inflate(R.layout.text_header, lv, false);
+        ((TextView) header.findViewById(R.id.textView)).setText(mensagem);
+        lv.addHeaderView(header, null, false);
+    }
+    */
 
     @Override
     public void onRequestPermissionsResult(int requestCode
@@ -110,8 +122,10 @@ public class DiscoveredDevices extends ListActivity implements ActivityCompat.On
             String action = intent.getAction();
 
             if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action)) {
+                /*alimentarCabecalho("\nDispositivos próximos\n - Iniciou o Scan");*/
                 /*arrayAdapter.add("Iniciou o scan");*/
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
+                /*alimentarCabecalho("\nDispositivos próximos\n - finalizou o Scan");*/
                 /*arrayAdapter.add("finalizou o scan");*/
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
