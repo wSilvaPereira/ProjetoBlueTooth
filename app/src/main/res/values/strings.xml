@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MainBluetoothActivity</string>
+    <string name="nomeAplicativo">Projeto Bluetooth</string>
+    <string name="hello_world">hello world</string>
+    <string name="dispositivosPareados">DISPOSITIVOS PAREADOS</string>
+    <string name="Iniciardescoberta">INICIAR DESCOBERTA DE DISPOSITIVOS</string>
+    <string name="HabilitarVisibilidade">HABILITAR VISIBILIDADE</string>
+    <string name="Habilitar">Habilitar</string>
+</resources>
