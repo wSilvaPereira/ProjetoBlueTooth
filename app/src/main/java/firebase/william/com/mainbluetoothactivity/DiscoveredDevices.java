@@ -78,16 +78,6 @@ public class DiscoveredDevices extends ListActivity implements ActivityCompat.On
 
     }
 
-    /*
-    public void alimentarCabecalho(String mensagem){
-        ListView lv = getListView();
-        LayoutInflater inflater = getLayoutInflater();
-        View header = inflater.inflate(R.layout.text_header, lv, false);
-        ((TextView) header.findViewById(R.id.textView)).setText(mensagem);
-        lv.addHeaderView(header, null, false);
-    }
-    */
-
     @Override
     public void onRequestPermissionsResult(int requestCode
                                          , String permissions[]
@@ -98,7 +88,6 @@ public class DiscoveredDevices extends ListActivity implements ActivityCompat.On
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permissão concedida, executo minha atividade
                 } else {
-                    finish();
                     // permissão negada, mostra uma mensagem pro usuário informando que tal funcionalidade não poderá ser executada
                 }
                 return;
